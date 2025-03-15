@@ -158,6 +158,27 @@ export const translations = {
     viewFullSize: 'Open Full Size Image ↗',
     characterError: 'Failed to generate character image. Please try again.',
     yourCharacter: 'Your Character',
+    teamMembers: {
+      title: 'Our Team',
+      description: 'Meet the people behind The Bookshelf',
+      members: [
+        {
+          name: 'John Doe',
+          role: 'Lead Developer',
+          bio: 'Passionate about creating innovative reading experiences'
+        },
+        {
+          name: 'Jane Smith',
+          role: 'UI/UX Designer',
+          bio: 'Creating beautiful and intuitive interfaces for book lovers'
+        },
+        {
+          name: 'Mike Johnson',
+          role: 'Content Curator',
+          bio: 'Helping readers discover their next favorite book'
+        }
+      ]
+    },
     contactUs: 'Contact Us',
     contactEmail: 'Email',
     contactMessage: 'Message',
@@ -320,8 +341,29 @@ export const translations = {
     generateCharacter: 'Ստեղծել Կերպար',
     creatingCharacter: 'Ստեղծում ենք ձեր կերպարը...',
     viewFullSize: 'Բացել Ամբողջական Չափով ↗',
-    characterError: 'Չհաջողվեց ստեղծել կերպարի պատկերը։ Խնդրում ենք կրկին փորձել։',
+    characterError: 'Չհաջողվեց ստեղծել կերպարի պատկերը։ Խնդրում ենք կրկին փորձել.',
     yourCharacter: 'Ձեր Կերպարը',
+    teamMembers: {
+      title: 'Մեր Թիմը',
+      description: 'Ծանոթացեք Գրապահարանի թիմի անդամների հետ',
+      members: [
+        {
+          name: 'Ջոն Դոու',
+          role: 'Գլխավոր Ծրագրավորող',
+          bio: 'Նվիրված է նորարարական ընթերցման փորձառությունների ստեղծմանը'
+        },
+        {
+          name: 'Ջեյն Սմիթ',
+          role: 'UI/UX Դիզայներ',
+          bio: 'Ստեղծում է գեղեցիկ և ինտուիտիվ ինտերֆեյսներ գրքի սիրահարների համար'
+        },
+        {
+          name: 'Մայք Ջոնսոն',
+          role: 'Բովանդակության Կուրատոր',
+          bio: 'Օգնում է ընթերցողներին հայտնաբերել իրենց հաջորդ սիրելի գիրքը'
+        }
+      ]
+    },
     contactUs: 'Կապ Մեզ Հետ',
     contactEmail: 'Էլ․ հասցե',
     contactMessage: 'Հաղորդագրություն',
