@@ -1,24 +1,44 @@
-import { openai } from '@ai-sdk/openai';
-import { streamText } from 'ai';
+import { OpenAI } from 'openai';
+import { NextResponse } from 'next/server';
 
-// Allow streaming responses up to 60 seconds
-export const maxDuration = 60;
+// Initialize OpenAI client
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
+export const runtime = 'edge';
 
 export async function POST(req: Request) {
-  const { prompt } = await req.json();
+  try {
+    const { bookIdea, pageLimit } = await req.json();
 
-  const result = streamText({
-    model: openai('gpt-4o-mini'),
-    maxSteps: 10,
-    experimental_continueSteps: true,
-    system:
-      `You write in the style of great, modern authors. ` +
-      `Write a book in Markdown format. ` +
-      `First write a table of contents. ` +
-      `Then write each chapter. ` +
-      `Each chapter MUST HAVE at least 1000 words.`,
-    prompt: `Write a book about ${prompt}.`,
-  });
+    // Calculate tokens needed (approximately 250 words per page, 1.5 tokens per word)
+    const estimatedTokens = Math.min(pageLimit * 375, 16000); // GPT-3.5 max is 16k tokens
 
-  return result.toDataStreamResponse();
-}
+    const response = await openai.chat.completions.create({
+      model: 'gpt-3.5-turbo-16k', // Using 16k model for longer content
+      messages: [
+        {
+          role: 'system',
+          content: `You are a creative writing assistant helping an author write their book. Generate engaging, well-structured content based on their idea. The content should be approximately ${pageLimit} pages long (assuming ~250 words per page). Format the output with proper chapters, paragraphs, and dialogue. For longer books, ensure proper story arc, character development, and pacing across chapters.`,
+        },
+        {
+          role: 'user',
+          content: bookIdea,
+        },
+      ],
+      temperature: 0.8,
+      max_tokens: estimatedTokens,
+    });
+
+    return NextResponse.json({
+      content: response.choices[0].message.content,
+    });
+  } catch (error) {
+    console.error('Error generating book content:', error);
+    return NextResponse.json(
+      { error: 'Failed to generate book content' },
+      { status: 500 }
+    );
+  }
+} 

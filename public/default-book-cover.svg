@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="300" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Book cover background -->
+  <rect width="200" height="300" fill="#f3e4d0"/>
+  
+  <!-- Book spine shadow -->
+  <rect x="10" y="10" width="20" height="280" fill="#a3785e" opacity="0.2"/>
+  
+  <!-- Decorative elements -->
+  <rect x="40" y="40" width="120" height="2" fill="#5c4434" opacity="0.3"/>
+  <rect x="40" y="260" width="120" height="2" fill="#5c4434" opacity="0.3"/>
+  
+  <!-- Book icon -->
+  <path d="M70 120 L130 120 L130 180 L70 180 Z" fill="none" stroke="#8b614a" stroke-width="2"/>
+  <path d="M70 120 L100 140 L130 120" fill="none" stroke="#8b614a" stroke-width="2"/>
+  <path d="M100 140 L100 180" fill="none" stroke="#8b614a" stroke-width="2"/>
+  
+  <!-- Text -->
+  <text x="100" y="220" font-family="serif" font-size="14" fill="#5c4434" text-anchor="middle">
+    Cover Not Available
+  </text>
+</svg> 

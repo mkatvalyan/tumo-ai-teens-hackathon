@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Bottom book -->
+  <rect x="10" y="70" width="80" height="20" fill="#8b7355" />
+  <rect x="10" y="70" width="80" height="3" fill="#4a3728" />
+  
+  <!-- Middle book -->
+  <rect x="15" y="50" width="70" height="20" fill="#6b5544" />
+  <rect x="15" y="50" width="70" height="3" fill="#4a3728" />
+  
+  <!-- Top book -->
+  <rect x="20" y="30" width="60" height="20" fill="#8b7355" />
+  <rect x="20" y="30" width="60" height="3" fill="#4a3728" />
+  
+  <!-- Book details -->
+  <line x1="25" y1="35" x2="75" y2="35" stroke="#4a3728" stroke-width="1" />
+  <line x1="20" y1="55" x2="85" y2="55" stroke="#4a3728" stroke-width="1" />
+  <line x1="15" y1="75" x2="90" y2="75" stroke="#4a3728" stroke-width="1" />
+</svg> 

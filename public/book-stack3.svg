@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Leaning books -->
+  <g transform="rotate(-15, 50, 50)">
+    <rect x="20" y="40" width="20" height="50" fill="#8b7355" />
+    <rect x="20" y="40" width="20" height="3" fill="#4a3728" />
+  </g>
+  
+  <g transform="rotate(10, 50, 50)">
+    <rect x="40" y="35" width="20" height="55" fill="#6b5544" />
+    <rect x="40" y="35" width="20" height="3" fill="#4a3728" />
+  </g>
+  
+  <g transform="rotate(-5, 50, 50)">
+    <rect x="60" y="45" width="20" height="45" fill="#4a3728" />
+    <rect x="60" y="45" width="20" height="3" fill="#8b7355" />
+  </g>
+  
+  <!-- Book details -->
+  <g transform="rotate(-15, 50, 50)">
+    <line x1="25" y1="45" x2="35" y2="45" stroke="#4a3728" stroke-width="1" />
+    <line x1="25" y1="50" x2="35" y2="50" stroke="#4a3728" stroke-width="1" />
+  </g>
+  
+  <g transform="rotate(10, 50, 50)">
+    <line x1="45" y1="40" x2="55" y2="40" stroke="#4a3728" stroke-width="1" />
+    <line x1="45" y1="45" x2="55" y2="45" stroke="#4a3728" stroke-width="1" />
+  </g>
+  
+  <g transform="rotate(-5, 50, 50)">
+    <line x1="65" y1="50" x2="75" y2="50" stroke="#8b7355" stroke-width="1" />
+    <line x1="65" y1="55" x2="75" y2="55" stroke="#8b7355" stroke-width="1" />
+  </g>
+</svg> 
